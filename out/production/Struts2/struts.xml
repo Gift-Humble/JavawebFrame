@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <package name="test" extends="struts-default">
+        <!--        name是访问路径 class是存储位置 method是访问方法-->
+        <action name="login" class="action.TestAction" method="login">
+            <!--            result是返回的跳转界面-->
+            <result name="success">/jsp/success.jsp</result>
+        </action>
+        <action name="showProduct" class="action.ProductAction" method="show">
+            <result name="show">jsp/show.jsp</result>
+        </action>
+        <action name="addProduct" class="action.ProductAction" method="add">
+            <result name="show">jsp/show.jsp</result>
+        </action>
+        <action name="upload" class="action.UploadAction" method="upload">
+            <result name="success">jsp/success.jsp</result>
+        </action>
+    </package>
+</struts>
