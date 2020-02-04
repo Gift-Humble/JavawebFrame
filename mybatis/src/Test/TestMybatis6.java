@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
+//注解方式配置CRUD测试类
 public class TestMybatis6 {
     public static void main(String[] args) throws IOException {
         InputStream inputStream = Resources.getResourceAsStream("mybatis-config.xml");
@@ -22,10 +23,10 @@ public class TestMybatis6 {
         //CRUD操作
 
 //        update(mapper);
-//        listAll(mapper);
+        listAll(mapper);
 //        get(mapper);
 //        delete(mapper);
-        add(mapper);
+//        add(mapper);
 
         session.commit();
         session.close();
