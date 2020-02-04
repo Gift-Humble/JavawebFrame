@@ -19,7 +19,7 @@ public interface CategoryMapper {
     public int update(Category category);
 
     @Select("select * from category_")
-    @Results({
+    @Results({ //一对多
             @Result(property = "id",column = "id"),
             @Result(property = "products",javaType = List.class,column = "id",many = @Many(select =
             "mapper.ProductMapper.listByCategory"))
