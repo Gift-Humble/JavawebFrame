@@ -28,5 +28,6 @@
         <mapper class="mapper.ProductMapper"/>
         <mapper class="mapper.OrderItemMapper"/>
         <mapper class="mapper.OrderMapper"/>
+        <mapper class="CategoryMapper1"/>
     </mappers>
 </configuration>
