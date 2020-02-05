@@ -8,24 +8,24 @@
     <!--    告诉spring用注解-->
     <!--    <context:annotation-config/>-->
     <!--    通过关键字c就可以获取Category对象，对象已经被注入值“category 1”到name属性中-->
-    <!--    <bean name="c" class="pojo.Category">-->
+    <!--    <bean name="c" class="com.pojo.Category">-->
     <!--        <property name="name" value="category 1"/>-->
     <!--    </bean>-->
-    <!--    <bean name="p" class="pojo.Product">-->
+    <!--    <bean name="p" class="com.pojo.Product">-->
     <!--        <property name="name" value="product1"/>-->
     <!--&lt;!&ndash;        <property name="category" ref="c"/>&ndash;&gt;-->
     <!--    </bean>-->
 
     <!--    上面所有都去掉，下面改为注解配置bean-->
-    <context:component-scan base-package="pojo"/>
+    <context:component-scan base-package="com.pojo"/>
 
     <!--    使用注解替换下面的配置bean类方式-->
-    <!--    <bean name="s" class="pojo.ProductService"></bean>-->
-    <!--    <bean id="loggerAspect" class="pojo.LoggerAspect"/>-->
+    <!--    <bean name="s" class="com.pojo.ProductService"></bean>-->
+    <!--    <bean id="loggerAspect" class="com.pojo.LoggerAspect"/>-->
 
     <!--    使用注解替换下面的配置方式-->
     <!--    <aop:config>-->
-    <!--        <aop:pointcut id="loggerCutpoint" expression="execution(* pojo.ProductService.*(..))"/>-->
+    <!--        <aop:pointcut id="loggerCutpoint" expression="execution(* com.pojo.ProductService.*(..))"/>-->
     <!--        <aop:aspect id="logAspect" ref="loggerAspect">-->
     <!--            <aop:around method="log" pointcut-ref="loggerCutpoint"/>-->
     <!--        </aop:aspect>-->

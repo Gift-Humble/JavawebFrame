@@ -4,7 +4,7 @@ import org.apache.commons.lang.xwork.RandomStringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-import pojo.UploadImageFile;
+import com.pojo.UploadImageFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
