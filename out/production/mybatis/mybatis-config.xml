@@ -8,6 +8,8 @@
         <setting name="lazyLoadingEnabled" value="true"/>
         <!-- 将积极加载改为消息加载即按需加载 -->
         <setting name="aggressiveLazyLoading" value="false"/>
+        <!--        二级缓存-->
+        <setting name="cacheEnabled" value="true"/>
     </settings>
     <typeAliases>
         <package name="how2java"/>
@@ -15,12 +17,13 @@
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
-            <dataSource type="POOLED">
-                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-                <property name="url"
+            <!--            <dataSource type="POOLED">-->
+            <dataSource type="c3p0.C3P0DataSourceFactory">
+                <property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="jdbcUrl"
                           value="jdbc:mysql://localhost:3306/how2java?characterEncoding=utf8&amp;
                           useSSL=false&amp;serverTimezone=UTC&amp;rewriteBatchedStatements=true"/>
-                <property name="username" value="root"/>
+                <property name="user" value="root"/>
                 <property name="password" value="123123"/>
             </dataSource>
         </environment>

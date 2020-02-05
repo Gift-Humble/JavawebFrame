@@ -21,9 +21,9 @@ public class TestMybatis10 {
 
 //        add(mapper);
 //        delete(mapper);
-//        get(mapper);
+        get(mapper);
 //        update(mapper);
-        listAll(mapper);
+//        listAll(mapper);
 
         session.commit();
         session.close();
@@ -38,7 +38,7 @@ public class TestMybatis10 {
     }
 
     private static void get(CategoryMapper1 mapper) {
-        Category c = mapper.get(2);
+        Category c = mapper.get(14);
         System.out.println(c.getName());
     }
 

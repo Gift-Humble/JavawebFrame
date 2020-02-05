@@ -19,15 +19,18 @@ public class TestMybatis {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         SqlSession session = sqlSessionFactory.openSession();
 
+        SqlSession session2 = sqlSessionFactory.openSession();
+
 
 //        insertCategory(session);
 //        deleteCategory(session);
 //        updateCategory(session);
 
 //        listAll(session);
-//        getCategory(session);
+        getCategory(session);
+        getCategory(session2);
 //        getLikeAll(session);
-        listCategoryByIdAndName(session);
+//        listCategoryByIdAndName(session);
 
         session.commit();
         session.close();
@@ -58,7 +61,7 @@ public class TestMybatis {
 
     //获取记录
     private static void getCategory(SqlSession session) {
-        Category c = session.selectOne("getCategory", 2);
+        Category c = session.selectOne("getCategory", 14);
         System.out.println(c.getName());
     }
 
