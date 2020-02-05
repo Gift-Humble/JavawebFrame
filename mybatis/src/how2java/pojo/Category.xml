@@ -42,4 +42,12 @@
     <select id="oneToMoreListCategory" resultMap="categoryBean">
         select c.id 'cid',p.id 'pid',c.name 'cname',p.name 'pname',p.price from category_ c left join product_ p on c.id = p.cid
     </select>
+
+    <!--    分页查询-->
+    <select id="listCategoryPage" resultType="Category">
+        select * from category_
+        <if test="start != null and count != null">
+            limit #{start},#{count}
+        </if>
+    </select>
 </mapper>

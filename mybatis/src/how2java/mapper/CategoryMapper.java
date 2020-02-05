@@ -20,9 +20,12 @@ public interface CategoryMapper {
 
     @Select("select * from category_")
     @Results({ //一对多
-            @Result(property = "id",column = "id"),
-            @Result(property = "products",javaType = List.class,column = "id",many = @Many(select =
-            "how2java.mapper.ProductMapper.listByCategory"))
+            @Result(property = "id", column = "id"),
+            @Result(property = "products", javaType = List.class, column = "id", many = @Many(select =
+                    "how2java.mapper.ProductMapper.listByCategory"))
     })
     public List<Category> list();
+
+    @Select("select * from category_ limit #{start}, #{count}")
+    public List<Category> listByPage(@Param("start") int start, @Param("count") int count); //分页
 }

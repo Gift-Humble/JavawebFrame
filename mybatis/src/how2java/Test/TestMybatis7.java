@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
+//一对多
 public class TestMybatis7 {
     public static void main(String[] args) throws IOException {
         InputStream inputStream = Resources.getResourceAsStream("mybatis-config.xml");
@@ -30,10 +31,10 @@ public class TestMybatis7 {
         List<Category> cs = mapper.list();
         for (Category c : cs) {
             System.out.println(c);
-            List<Product> ps = c.getProducts();
-            for (Product p : ps) {
-                System.out.println("\t" + p);
-            }
+//            List<Product> ps = c.getProducts();
+//            for (Product p : ps) {
+//                System.out.println("\t" + p);
+//            }
         }
     }
 }

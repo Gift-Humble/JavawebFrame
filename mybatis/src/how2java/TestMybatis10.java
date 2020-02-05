@@ -19,10 +19,10 @@ public class TestMybatis10 {
         SqlSession session = sqlSessionFactory.openSession();
         CategoryMapper1 mapper = session.getMapper(CategoryMapper1.class);
 
-//        add(com.mapper);
-//        delete(com.mapper);
-//        get(com.mapper);
-//        update(com.mapper);
+//        add(mapper);
+//        delete(mapper);
+//        get(mapper);
+//        update(mapper);
         listAll(mapper);
 
         session.commit();
@@ -49,7 +49,7 @@ public class TestMybatis10 {
 
     private static void add(CategoryMapper1 mapper) {
         Category c = new Category();
-        c.setName("新增加的Category");
+        c.setName("新增加的Category长度不超过32");
         mapper.add(c);
         listAll(mapper);
     }
